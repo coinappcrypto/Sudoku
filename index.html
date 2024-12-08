@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Intro Screen -->
+  <div id="intro">
+    <p>Bu oyun 10/A sınıfı öğrencileri adına özenle hazırlanmıştır</p>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-container">
+    <div id="difficulty-container">
+      <select id="difficulty-select">
+        <option value="easy">Kolay</option>
+        <option value="medium">Orta</option>
+        <option value="hard">Zor</option>
+      </select>
+      <button id="start-game">Oyun Başlat</button>
+    </div>
+
+    <div id="time">00:00</div>
+
+    <div id="board"></div>
+
+    <div>
+      <button id="solve" disabled>Çöz</button>
+    </div>
+
+    <div id="feedback"></div>
+    <div id="points">Puan: -</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

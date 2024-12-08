@@ -1,0 +1,137 @@
+/* Genel stil */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Tüm yazılara Comic Sans fontu ekleniyor */
+}
+
+body, html {
+  height: 100%;
+  background-color: #000; /* Siyah arka plan */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Intro ekranı */
+#intro {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  animation: fadeInOut 3s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Oyun ekranı */
+#game-container {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Sudoku Tahtası */
+#board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 5px;
+  width: 90vw;
+  height: 70vh;
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+/* Geçerli ve geçersiz hücreler için renkler */
+input.valid {
+  border-color: green; /* Geçerli hücre için yeşil sınır */
+}
+
+input.invalid {
+  border-color: blue; /* Geçersiz hücre için kırmızı sınır */
+}
+
+/* Sadece değer girildiğinde geçerli/ geçersiz renklerin görünmesi */
+input:focus {
+  outline: none;
+}
+
+input:not(:placeholder-shown).valid {
+  border-color: green; /* Geçerli hücre için yeşil sınır, sadece değer girildiyse */
+}
+
+input:not(:placeholder-shown).invalid {
+  border-color: yellow; /* Geçersiz hücre için kırmızı sınır, sadece değer girildiyse */
+}
+
+input:empty {
+  border-color: #333; /* Eğer kutu boşsa varsayılan renk */
+}
+
+/* Puan ve Zaman */
+#time {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+#feedback {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#points {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/* Zorluk Seçimi */
+#difficulty-select {
+  padding: 10px;
+  font-size: 16px;
+}
