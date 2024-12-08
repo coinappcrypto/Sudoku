@@ -7,7 +7,7 @@ let difficulty = "easy"; // Varsayılan zorluk
 let filledCells = 0;
 
 // Intro ekranı başladığında sadece aydınlatma animasyonu yapıyoruz, bitişte animasyon yok
-document.getElementById("intro").style.animation = "fadeIn 3s forwards";  // Aydınlatma animasyonu başlatma
+document.getElementById("intro").style.animation = "fadeIn 6s forwards";  // Aydınlatma animasyonu başlatma
 
 // 3 saniye sonra intro ekranını gizliyoruz ve oyun ekranını gösteriyoruz
 setTimeout(() => {
