@@ -107,7 +107,7 @@ input:not(:placeholder-shown).valid {
 }
 
 input:not(:placeholder-shown).invalid {
-  border-color: yellow; /* Geçersiz hücre için kırmızı sınır, sadece değer girildiyse */
+  border-color: blue; /* Geçersiz hücre için kırmızı sınır, sadece değer girildiyse */
 }
 
 input:empty {
